@@ -1,0 +1,16 @@
+TIME='v1'
+
+
+docker build -t bashapp:$TIME .
+
+
+docker tag bashapp:$TIME marutidock/flask_app:$TIME
+
+docker push marutidock/flask_app:$TIME
+if [[ -n "$result" ]]; then
+echo "image exists"
+sudo docker rmi -f helloworld
+else
+echo "No such image"
+fi
+echo "change the dir"
