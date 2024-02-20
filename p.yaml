@@ -11,5 +11,5 @@ spec:
       containers:
       - name: busybox
         image: busybox
-        command: ["echo", "hello world"]
+        command: ["echo", "hello world jenkins"]
       restartPolicy: Never
